@@ -8,7 +8,7 @@ from scipy import io
 
 
 def megaDepth_dataPipeline(num_subbatch_input, dir):
-	# import ipdb; ipdb.set_trace()
+	#import ipdb; ipdb.set_trace()
 	# locate all scenes 
 	data_scenes1 = np.array(sorted(glob.glob(os.path.join(dir, '*'))))
 
@@ -87,6 +87,9 @@ def md_construct_inputPipeline(items, batch_size, flag_shuffle=True):
 		data = data.apply(tf.contrib.data.shuffle_and_repeat(buffer_size=100000))
 	else:
 		data = data.repeat()
+
+	#import ipdb; ipdb.set_trace()
+	#ok = _read_pk_function('Data\\037\\037_0000.pk')
 	data = data.apply(tf.contrib.data.parallel_interleave(md_read_func, cycle_length=batch_size, block_length=1, sloppy=False ))
 	data = data.map(md_preprocess_func, num_parallel_calls=8 )
 	data = data.batch(batch_size).prefetch(4)

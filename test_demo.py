@@ -3,10 +3,10 @@ import numpy as np
 import tensorflow as tf
 import cv2
 from skimage import io
+from scipy.io import savemat
 import argparse
 from model import SfMNet, lambSH_layer, pred_illuDecomp_layer
 from utils import render_sphere_nm
-
 
 parser = argparse.ArgumentParser(description='InverseRenderNet')
 parser.add_argument('--image', help='Path to test image')
@@ -53,7 +53,7 @@ def pinv(A, reltol=1e-6):
 	return tf.matmul(v, tf.matmul(s_inv, tf.transpose(u)))
 
 
-import ipdb; ipdb.set_trace()
+#import ipdb; ipdb.set_trace()
 inputs_var = tf.placeholder(tf.float32, (None, input_height, input_width, 3))
 masks_var = tf.placeholder(tf.float32, (None, input_height, input_width, 1))
 am_deconvOut, nm_deconvOut = SfMNet.SfMNet(inputs=inputs_var,is_training=False, height=input_height, width=input_width, n_layers=30, n_pools=4, depth_base=32)
@@ -68,6 +68,7 @@ gamma = tf.constant(2.2)
 # post-process on raw albedo and nm_pred
 albedos = tf.nn.sigmoid(albedos) * masks_var + tf.constant(1e-4)
 
+#import ipdb; ipdb.set_trace()
 nm_pred_norm = tf.sqrt(tf.reduce_sum(nm_pred**2, axis=-1, keepdims=True)+tf.constant(1.))
 nm_pred_xy = nm_pred / nm_pred_norm
 nm_pred_z = tf.constant(1.) / nm_pred_norm
@@ -112,7 +113,10 @@ mask = cv2.resize(mask, (input_width, input_height), cv2.INTER_NEAREST)
 mask = np.float32(mask==255)[None,:,:,None]
 
 [albedos_val, nm_pred_val, lighting_recon_val, shading_val] = sess.run([albedos, nm_pred_xyz, lighting_recon, shading], feed_dict={inputs_var:img, masks_var:mask})
+lightings_val = sess.run(lightings, feed_dict={inputs_var:img, masks_var:mask})
 
+# lighting matfile
+savemat(os.path.join(dst_dir, 'lightings.mat'), {'lightings':lightings_val})
 
 # post-process results
 nm_pred_val = (nm_pred_val+1.)/2.

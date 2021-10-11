@@ -5,6 +5,7 @@ import tensorflow as tf
 import numpy as np
 import os
 from model import SfMNet, lambSH_layer, pred_illuDecomp_layer, sup_illuDecomp_layer, reproj_layer
+from utils import render_sphere_nm
 
 def loss_formulate(albedos, nm_pred, am_sup, nm_gt, inputs, dms, cams, scale_xs, scale_ys, masks, pair_label, preTrain_flag, am_smt_w_var, reproj_w_var, reg_loss_flag=True):
 
@@ -24,7 +25,7 @@ def loss_formulate(albedos, nm_pred, am_sup, nm_gt, inputs, dms, cams, scale_xs,
 
 
 	# reconstruct SH lightings from predicted statistical SH lighting model
-	lighting_model = '../hdr_illu_pca'
+	lighting_model = 'illu_pca/'#'../hdr_illu_pca'
 	lighting_vectors = tf.constant(np.load(os.path.join(lighting_model,'pcaVector.npy')),dtype=tf.float32)
 	lighting_means = tf.constant(np.load(os.path.join(lighting_model,'mean.npy')),dtype=tf.float32)
 	lightings_var = tf.constant(np.load(os.path.join(lighting_model,'pcaVariance.npy')),dtype=tf.float32)
@@ -32,7 +33,7 @@ def loss_formulate(albedos, nm_pred, am_sup, nm_gt, inputs, dms, cams, scale_xs,
 	if preTrain_flag:
 		lightings = sup_illuDecomp_layer.illuDecomp(inputs,albedos,nm_gt,gamma)
 	else:
-		lightings =pred_illuDecomp_layer.illuDecomp(inputs,albedos,nm_pred_xyz,gamma,masks)
+		lightings = pred_illuDecomp_layer.illuDecomp(inputs,albedos,nm_pred_xyz,gamma,masks)
 
 	lightings_pca = tf.matmul((lightings - lighting_means), pinv(lighting_vectors))
 
@@ -113,9 +114,15 @@ def loss_formulate(albedos, nm_pred, am_sup, nm_gt, inputs, dms, cams, scale_xs,
 	# self-supervision based on intensity reconstruction
 	shadings, renderings_mask = lambSH_layer.lambSH_layer(tf.ones_like(albedos), normals, lightings, 1.)
 
+	# lighting visualization
+	nm_sphere = tf.constant(render_sphere_nm.render_sphere_nm(100,1),dtype=tf.float32)
+	nm_sphere = tf.tile(nm_sphere, (tf.shape(inputs)[0],1,1,1))
+	lighting_recon, _ = lambSH_layer.lambSH_layer(tf.ones_like(nm_sphere), nm_sphere, lightings, 1.)
+
 	# compare rendering intensity by Lab
 	inputs_pixels = cvtLab(tf.boolean_mask(inputs,renderings_mask))
-	renderings = cvtLab(tf.boolean_mask(tf.pow(albedos*shadings,1./gamma),renderings_mask))
+	renderings_rgb = tf.pow(albedos*shadings,1./gamma)
+	renderings = cvtLab(tf.boolean_mask(renderings_rgb,renderings_mask))
 	render_err = tf.losses.mean_squared_error(inputs_pixels,renderings)
 
 
@@ -221,7 +228,7 @@ def loss_formulate(albedos, nm_pred, am_sup, nm_gt, inputs, dms, cams, scale_xs,
 	else:
 		loss = render_err + reproj_err + cross_render_err + illu_prior_loss + albedo_smt_error + nm_pred_smt_error + nm_loss + am_loss
 
-	return lightings, albedos, nm_pred_xyz, loss, render_err, reproj_err, cross_render_err, reg_loss, illu_prior_loss, albedo_smt_error, nm_pred_smt_error, nm_loss, am_loss
+	return lightings, albedos, nm_pred_xyz, lighting_recon, shadings, renderings_rgb, loss, render_err, reproj_err, cross_render_err, reg_loss, illu_prior_loss, albedo_smt_error, nm_pred_smt_error, nm_loss, am_loss
 
 
 

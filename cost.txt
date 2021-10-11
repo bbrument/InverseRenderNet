@@ -1,0 +1,132 @@
+iter 1/30 loop 1/10 took 73.378s
+	loss_avg = 5.953192, loss = 5.953192
+		reg_loss = 3.991670, render_err = 0.319298, reproj_err = 0.055514, cross_render_err = 0.277170, illu_prior = 0.024733, albedo_smt_error = 0.292817, nm_smt_loss = 0.037928, nm_loss = 0.954063, am_loss = 0.000000
+iter 1/30 loop 1/10 took 55.685s
+	loss_avg = 5.685068, loss = 5.685068
+		reg_loss = 3.991702, render_err = 0.151490, reproj_err = 0.046763, cross_render_err = 0.118121, illu_prior = 0.028129, albedo_smt_error = 0.277275, nm_smt_loss = 0.034403, nm_loss = 1.037186, am_loss = 0.000000
+iter 1/30 loop 1/10 took 55.356s
+	loss_avg = 5.778426, loss = 5.778426
+		reg_loss = 3.991698, render_err = 0.221243, reproj_err = 0.046495, cross_render_err = 0.193928, illu_prior = 0.037742, albedo_smt_error = 0.143463, nm_smt_loss = 0.029134, nm_loss = 1.114724, am_loss = 0.000000
+iter 1/30 loop 1/10 took 49.804s
+	loss_avg = 5.688580, loss = 5.688580
+		reg_loss = 3.991696, render_err = 0.172136, reproj_err = 0.038190, cross_render_err = 0.118702, illu_prior = 0.023547, albedo_smt_error = 0.278623, nm_smt_loss = 0.037262, nm_loss = 1.028423, am_loss = 0.000000
+iter 1/30 loop 2/10 took 49.040s
+	loss_avg = 5.719436, loss = 5.750292
+		reg_loss = 3.991695, render_err = 0.175426, reproj_err = 0.032078, cross_render_err = 0.150570, illu_prior = 0.017868, albedo_smt_error = 0.201661, nm_smt_loss = 0.037244, nm_loss = 1.143751, am_loss = 0.000000
+iter 1/30 loop 3/10 took 54.073s
+	loss_avg = 5.732576, loss = 5.758855
+		reg_loss = 3.991695, render_err = 0.159293, reproj_err = 0.028517, cross_render_err = 0.147487, illu_prior = 0.025156, albedo_smt_error = 0.183987, nm_smt_loss = 0.038364, nm_loss = 1.184355, am_loss = 0.000000
+iter 1/30 loop 4/10 took 50.982s
+	loss_avg = 5.621374, loss = 5.287769
+		reg_loss = 3.991695, render_err = 0.168479, reproj_err = 0.031447, cross_render_err = 0.157400, illu_prior = 0.036643, albedo_smt_error = 0.128715, nm_smt_loss = 0.021246, nm_loss = 0.752143, am_loss = 0.000000
+iter 1/30 loop 5/10 took 51.007s
+	loss_avg = 5.528497, loss = 5.156988
+		reg_loss = 3.991695, render_err = 0.133474, reproj_err = 0.031979, cross_render_err = 0.133662, illu_prior = 0.036006, albedo_smt_error = 0.099616, nm_smt_loss = 0.019175, nm_loss = 0.711383, am_loss = 0.000000
+iter 1/30 loop 6/10 took 51.633s
+	loss_avg = 5.481745, loss = 5.247987
+		reg_loss = 3.991694, render_err = 0.127660, reproj_err = 0.018929, cross_render_err = 0.121589, illu_prior = 0.027071, albedo_smt_error = 0.135785, nm_smt_loss = 0.024615, nm_loss = 0.800643, am_loss = 0.000000
+iter 1/30 loop 7/10 took 53.788s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 8/10 took 54.856s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 9/10 took 53.888s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 10/10 took 52.821s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 1/10 took 69.299s
+	loss_avg = 5.572224, loss = 5.572224
+		reg_loss = 3.991656, render_err = 0.190190, reproj_err = 0.029899, cross_render_err = 0.180663, illu_prior = 0.030354, albedo_smt_error = 0.145190, nm_smt_loss = 0.023776, nm_loss = 0.980495, am_loss = 0.000000
+iter 1/30 loop 1/10 took 54.632s
+	loss_avg = 5.851476, loss = 5.851476
+		reg_loss = 3.991719, render_err = 0.176164, reproj_err = 0.023222, cross_render_err = 0.161847, illu_prior = 0.026873, albedo_smt_error = 0.244996, nm_smt_loss = 0.036795, nm_loss = 1.189859, am_loss = 0.000000
+iter 1/30 loop 1/10 took 53.628s
+	loss_avg = 5.484965, loss = 5.484965
+		reg_loss = 3.991728, render_err = 0.150079, reproj_err = 0.029746, cross_render_err = 0.144588, illu_prior = 0.032711, albedo_smt_error = 0.163648, nm_smt_loss = 0.027768, nm_loss = 0.944697, am_loss = 0.000000
+iter 1/30 loop 1/10 took 54.111s
+	loss_avg = 5.728034, loss = 5.728034
+		reg_loss = 3.991710, render_err = 0.165069, reproj_err = 0.036735, cross_render_err = 0.145572, illu_prior = 0.022259, albedo_smt_error = 0.151153, nm_smt_loss = 0.033786, nm_loss = 1.181751, am_loss = 0.000000
+iter 1/30 loop 1/10 took 53.630s
+	loss_avg = 5.914464, loss = 5.914464
+		reg_loss = 3.991740, render_err = 0.182632, reproj_err = 0.042079, cross_render_err = 0.151179, illu_prior = 0.026766, albedo_smt_error = 0.198285, nm_smt_loss = 0.031539, nm_loss = 1.290243, am_loss = 0.000000
+iter 1/30 loop 1/10 took 53.538s
+	loss_avg = 5.569310, loss = 5.569310
+		reg_loss = 3.991661, render_err = 0.298510, reproj_err = 0.068596, cross_render_err = 0.218165, illu_prior = 0.036228, albedo_smt_error = 0.172926, nm_smt_loss = 0.027314, nm_loss = 0.755910, am_loss = 0.000000
+iter 1/30 loop 1/10 took 53.006s
+	loss_avg = 5.413793, loss = 5.413793
+		reg_loss = 3.991612, render_err = 0.162319, reproj_err = 0.033525, cross_render_err = 0.141325, illu_prior = 0.022491, albedo_smt_error = 0.165024, nm_smt_loss = 0.028489, nm_loss = 0.869006, am_loss = 0.000000
+iter 1/30 loop 1/10 took 56.847s
+	loss_avg = 5.582281, loss = 5.582281
+		reg_loss = 3.991744, render_err = 0.213002, reproj_err = 0.040337, cross_render_err = 0.192972, illu_prior = 0.037928, albedo_smt_error = 0.171903, nm_smt_loss = 0.031320, nm_loss = 0.903076, am_loss = 0.000000
+iter 1/30 loop 1/10 took 64.794s
+	loss_avg = 5.656229, loss = 5.656229
+		reg_loss = 3.991649, render_err = 0.213302, reproj_err = 0.044314, cross_render_err = 0.143794, illu_prior = 0.028909, albedo_smt_error = 0.130943, nm_smt_loss = 0.025294, nm_loss = 1.078024, am_loss = 0.000000
+iter 1/30 loop 1/10 took 71.188s
+	loss_avg = 5.872398, loss = 5.872398
+		reg_loss = 3.991660, render_err = 0.208389, reproj_err = 0.031665, cross_render_err = 0.199620, illu_prior = 0.035199, albedo_smt_error = 0.162104, nm_smt_loss = 0.026862, nm_loss = 1.216899, am_loss = 0.000000
+iter 1/30 loop 1/10 took 66.917s
+	loss_avg = 5.790954, loss = 5.790954
+		reg_loss = 3.991775, render_err = 0.234281, reproj_err = 0.047388, cross_render_err = 0.215163, illu_prior = 0.026556, albedo_smt_error = 0.212589, nm_smt_loss = 0.027663, nm_loss = 1.035540, am_loss = 0.000000
+iter 1/30 loop 1/10 took 57.069s
+	loss_avg = 6.079916, loss = 6.079916
+		reg_loss = 3.991740, render_err = 0.243988, reproj_err = 0.050088, cross_render_err = 0.224976, illu_prior = 0.016875, albedo_smt_error = 0.148039, nm_smt_loss = 0.035636, nm_loss = 1.368573, am_loss = 0.000000
+iter 1/30 loop 1/10 took 54.843s
+	loss_avg = 5.697419, loss = 5.697419
+		reg_loss = 3.991695, render_err = 0.225963, reproj_err = 0.046244, cross_render_err = 0.204184, illu_prior = 0.035857, albedo_smt_error = 0.118004, nm_smt_loss = 0.024946, nm_loss = 1.050526, am_loss = 0.000000
+iter 1/30 loop 1/10 took 54.315s
+	loss_avg = 5.567989, loss = 5.567989
+		reg_loss = 3.991707, render_err = 0.191398, reproj_err = 0.036302, cross_render_err = 0.164810, illu_prior = 0.031728, albedo_smt_error = 0.159120, nm_smt_loss = 0.031374, nm_loss = 0.961550, am_loss = 0.000000
+iter 1/30 loop 1/10 took 55.573s
+	loss_avg = 6.400692, loss = 6.400692
+		reg_loss = 3.991769, render_err = 0.245074, reproj_err = 0.068326, cross_render_err = 0.238448, illu_prior = 0.021910, albedo_smt_error = 0.188645, nm_smt_loss = 0.021722, nm_loss = 1.624795, am_loss = 0.000000
+iter 1/30 loop 1/10 took 55.595s
+	loss_avg = 5.376172, loss = 5.376172
+		reg_loss = 3.991723, render_err = 0.181715, reproj_err = 0.042844, cross_render_err = 0.170716, illu_prior = 0.038688, albedo_smt_error = 0.148816, nm_smt_loss = 0.022750, nm_loss = 0.778921, am_loss = 0.000000
+iter 1/30 loop 1/10 took 71.259s
+	loss_avg = 5.484509, loss = 5.484509
+		reg_loss = 3.991648, render_err = 0.187562, reproj_err = 0.048988, cross_render_err = 0.151412, illu_prior = 0.029823, albedo_smt_error = 0.159473, nm_smt_loss = 0.022855, nm_loss = 0.892748, am_loss = 0.000000
+iter 1/30 loop 1/10 took 65.109s
+	loss_avg = 5.491170, loss = 5.491170
+		reg_loss = 3.991698, render_err = 0.218919, reproj_err = 0.044553, cross_render_err = 0.173310, illu_prior = 0.037322, albedo_smt_error = 0.183516, nm_smt_loss = 0.032952, nm_loss = 0.808901, am_loss = 0.000000
+iter 1/30 loop 1/10 took 57.942s
+	loss_avg = 5.512597, loss = 5.512597
+		reg_loss = 3.991722, render_err = 0.158445, reproj_err = 0.047495, cross_render_err = 0.153926, illu_prior = 0.031572, albedo_smt_error = 0.191904, nm_smt_loss = 0.030979, nm_loss = 0.906554, am_loss = 0.000000
+iter 1/30 loop 1/10 took 63.485s
+	loss_avg = 5.880773, loss = 5.880773
+		reg_loss = 3.991695, render_err = 0.181090, reproj_err = 0.041570, cross_render_err = 0.164661, illu_prior = 0.031708, albedo_smt_error = 0.145298, nm_smt_loss = 0.023569, nm_loss = 1.301183, am_loss = 0.000000
+iter 1/30 loop 2/10 took 69.468s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 1/10 took 68.246s
+	loss_avg = 5.397597, loss = 5.397597
+		reg_loss = 3.991738, render_err = 0.137801, reproj_err = 0.037010, cross_render_err = 0.125867, illu_prior = 0.022088, albedo_smt_error = 0.162030, nm_smt_loss = 0.022807, nm_loss = 0.898255, am_loss = 0.000000
+iter 1/30 loop 2/10 took 64.941s
+	loss_avg = 5.476512, loss = 5.555427
+		reg_loss = 3.991738, render_err = 0.143759, reproj_err = 0.026614, cross_render_err = 0.131920, illu_prior = 0.026149, albedo_smt_error = 0.245843, nm_smt_loss = 0.030911, nm_loss = 0.958493, am_loss = 0.000000
+iter 1/30 loop 3/10 took 63.893s
+	loss_avg = 5.519563, loss = 5.605665
+		reg_loss = 3.991738, render_err = 0.223869, reproj_err = 0.028532, cross_render_err = 0.201053, illu_prior = 0.036733, albedo_smt_error = 0.129580, nm_smt_loss = 0.029282, nm_loss = 0.964879, am_loss = 0.000000
+iter 1/30 loop 4/10 took 57.914s
+	loss_avg = 5.494243, loss = 5.418284
+		reg_loss = 3.991737, render_err = 0.187057, reproj_err = 0.027053, cross_render_err = 0.171824, illu_prior = 0.035575, albedo_smt_error = 0.101903, nm_smt_loss = 0.028957, nm_loss = 0.874177, am_loss = 0.000000
+iter 1/30 loop 5/10 took 54.830s
+	loss_avg = 5.421596, loss = 5.131010
+		reg_loss = 3.991737, render_err = 0.140228, reproj_err = 0.020650, cross_render_err = 0.122529, illu_prior = 0.031777, albedo_smt_error = 0.097214, nm_smt_loss = 0.022605, nm_loss = 0.704269, am_loss = 0.000000
+iter 1/30 loop 6/10 took 60.004s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 7/10 took 62.269s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 8/10 took 62.321s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 9/10 took 62.239s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
+iter 1/30 loop 10/10 took 60.574s
+	loss_avg = nan, loss = nan
+		reg_loss = nan, render_err = nan, reproj_err = nan, cross_render_err = nan, illu_prior = nan, albedo_smt_error = nan, nm_smt_loss = nan, nm_loss = nan, am_loss = 0.000000
